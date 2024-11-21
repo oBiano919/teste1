@@ -1,0 +1,946 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
+/*tudo⬇️ */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*menu⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*pagina⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEÇÃO ATIVIDADES */
+#atividades {
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #fefce8, #f9f5d7);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#atividades:hover {
+    transform: scale(1.02);
+}
+
+.atividades-content h3.js3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4500;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.atividades-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul.js4 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+ul.js4 li {
+    position: relative;
+}
+
+ul.js4 li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #ff4500, #ffa500);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+ul.js4 li a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, #ffa500, #ff4500);
+}
+
+ul.js4 li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    ul.js4 {
+        gap: 10px;
+    }
+
+    ul.js4 li a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+/* SEÇÃO SOBRE - PROJETO */
+.projeto-sobre {
+    margin: 80px auto 30px;
+    background: linear-gradient(135deg, #1c1c1c, #333);
+    color: #f5f5f5;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* EFEITO DE DESTAQUE */
+.projeto-sobre::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.2), transparent);
+    animation: rotar 10s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.projeto-sobre h1.projeto-titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffa500;
+    margin-bottom: 15px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+}
+
+.projeto-sobre h3.projeto-subtitulo {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ff4500;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.projeto-sobre p.projeto-descricao {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    z-index: 2;
+    position: relative;
+}
+
+/* ANIMAÇÕES SCROLLREVEAL */
+.projeto-container {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .projeto-sobre h1.projeto-titulo {
+        font-size: 2rem;
+    }
+
+    .projeto-sobre h3.projeto-subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .projeto-sobre p.projeto-descricao {
+        font-size: 1rem;
+    }
+}
+
+/* Estilização geral */
+#galeria {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#galeria h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#galeria h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.galeria img, .galeria video {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover, .galeria video:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .galeria img, .galeria video {
+        flex: 1 1 calc(33.333% - 10px); /* Distribuir imagens em 3 colunas */
+    }
+}
+
+@media (max-width: 767px) {
+    .galeria {
+        flex-direction: column; /* Imagens empilhadas no celular */
+    }
+}
+
+
+
+/* Galeria de Fotos/Vídeos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.galeria img {
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.galeria video {
+    max-width: 300px;
+    max-height: 200px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: #000;
+}
+
+.galeria a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.galeria a img {
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 450px) {
+    .galeria img,
+    .galeria video {
+        max-width: 100%;
+    }
+}
+
+.galeria {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+.galeria img {
+    width: 100%; /* Para imagens responsivas */
+    height: auto; /* Mantém a proporção das imagens */
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Para telas maiores (notebook e desktop), as imagens terão o mesmo tamanho fixo */
+@media (min-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas automáticas */
+    }
+    .galeria img {
+        height: 200px; /* Altura fixa para manter as imagens do mesmo tamanho */
+    }
+}
+
+/* Efeito de zoom ao passar o mouse */
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Botão Desenvolver */
+.desenvolver {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.desenvolver a {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0078D7;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.desenvolver::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.desenvolver a:hover {
+    color: #000;
+    transform: scale(1.05);
+}
+
+.desenvolver:hover::before {
+    left: -10%;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+
+
+
+
+
+
+
+footer {
+    position: relative;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Posicionamento do botão corrigido */
+.desenvolver {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.desenvolver a {
+    color: #fff;
+    background-color: #0078D7;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+}
+
+/* Botão Seta */
+.seta {
+    background-color: #1c1c1c; /* Fundo preto para transmitir força e elegância */
+    color: #FFD700; /* Dourado, símbolo de prosperidade */
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito para dar destaque ao botão */
+    border: none;
+    border-radius: 50px; /* Deixa o botão mais arredondado */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #FFD700; /* Inverte as cores no hover */
+    color: #1c1c1c; /* Texto preto */
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+.seta:active {
+    transform: scale(0.95); /* Dá uma sensação de clique */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .desenvolver {
+        position: static; /* Remove o posicionamento absoluto */
+        margin: 20px auto; /* Centraliza o botão */
+        text-align: center; /* Garante alinhamento no centro */
+    }
+    
+    footer {
+        padding-bottom: 50px; /* Adiciona mais espaço para evitar sobreposição */
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+/* Estilos básicos do nav */
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente por padrão */
+    align-items: center;
+    background-color: #333; /* Fundo do nav */
+    padding: 10px 0;
+}
+
+.nav-links ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Alinha os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os links */
+    flex-wrap: wrap; /* Permite quebrar linha se necessário */
+}
+
+.nav-links ul li a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.nav-links ul li a:hover {
+    color: #FFD700; /* Cor dourada no hover */
+}
+
+/* Estilo responsivo para dispositivos menores */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde o menu inicialmente */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%; /* Ocupa toda a largura */
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Empilha os links verticalmente */
+        gap: 10px;
+    }
+}
+
+/* Estilo para exibir o menu corretamente em telas maiores */
+@media (min-width: 769px) {
+    .nav-links {
+        flex-direction: row; /* Links na horizontal */
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilo Geral do Header */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Esconde o ícone por padrão */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+.nav-menu, .nav-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: #FFDC00;
+    color: #001f3f;
+}
+
+.nav-menu ul li span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o menu no mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+}

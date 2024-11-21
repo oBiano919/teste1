@@ -1,0 +1,102 @@
+
+
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+footer p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+footer {
+    position: relative;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Posicionamento do botão corrigido */
+.desenvolver {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.desenvolver a {
+    color: #fff;
+    background-color: #0078D7;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+}

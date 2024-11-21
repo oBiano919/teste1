@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=no">
+    <title>Centro Educacional 08 - Gama</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" type="text/css" href="desenvolvedores.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com logotipo e ícone do menu -->
+    <header class="custom-header">
+        <a href="index.html" class="logo">
+            <h1>CED 08</h1>
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="sobreNos.html"><span>📖</span> Sobre Nós</a></li>
+                <!-- <li><a href="Teatro.html"><span>🎭</span> Teatro "Corpo Fechado"</a></li> -->
+                <li><a href="ConciênciaNegra.html"><span>✊🏽</span> Consciência Negra</a></li>
+                <li><a href="conquistas.html"><span>🔬</span> CED 08 Ciência</a></li>
+                <li><a href="curiosidades.html"><span>🔎</span> Curiosidades</a></li>
+                <li><a href="https://www.instagram.com/ced08gama/"><span>📸</span> Instagram</a></li>
+                <li><a href="https://linktr.ee/ced08gama?fbclid=PAZXh0bgNhZW0CMTEAAaY-ps3hxEQBxYxWM96Z-MFCefbhvxPBCILXVytCb_EE5ttX6PuAIMvVspg_aem_TlQLX6Tx_wIWXVK3rwaXHA"><span>🔗</span> Informações Importantes</a></li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </header>
+
+
+
+    <section id="sobre">
+        <h2 class="js1" style="margin-top: 100px;">Desenvolvedores</h2>
+        <h4> esse Site foi programado por </h4>
+    </section>
+
+    <section id="atividades">
+        <h3 style="color: aliceblue;" >Fabiano Oliveira de Freitas</h3>
+         <p>meios de contato:</p><a href="https://www.instagram.com/o_biano/">Instagam</a>
+        <div>
+             <img src="fabiano.jpeg" style="width: 100px; border-radius: 100px;" alt="Desenvolvedor fabiano">
+        </div>
+    </section>
+    <br>
+    <section id="atividades">
+        <h3 style="color: aliceblue;" >Luan Alexandre Reis Belchior</h3>
+        <p>Meios de contato:</p>
+        <a class="social-link" href="https://www.instagram.com/luan_.belchior/" target="_blank">Instagram</a>
+        <div class="profile-image">
+            <img src="luanb.jpeg" alt="Desenvolvedor Luan Belchior">
+        </div>
+    </section>
+    
+
+    <br>
+   <section id="atividades">
+        <h3 style="color: aliceblue;" >Luan Rodrigues de oliveira</h3>
+        <p>meios de contato:</p><a href="https://www.instagram.com/luanr0/">Instagam</a>
+        <div>
+             <img src="luanr.jpeg" style="width: 100px; border-radius: 100px;" alt="Desenvolvedor fabiano">
+        </div>
+    </section> 
+    <br>
+    <br>
+
+    <footer>
+        <p>CED08 Gama - Educação para a Inclusão e Consciência</p>
+        <p>&copy; 2024 CED08 Gama. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <button class="seta" onclick="topFunction()" id="topButton" title="Voltar ao topo">⬆️</button>
+
+    <script>
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            const topButton = document.getElementById("topButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // ScrollReveal Configuration
+        ScrollReveal().reveal('.js1', { duration: 2000 });
+        ScrollReveal().reveal('.js2', { duration: 2000 });
+        ScrollReveal().reveal('.js3', { duration: 2000 });
+        ScrollReveal().reveal('.area-1', { duration: 2000 });
+        function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+}
+
+function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+    </script>
+
+
+    <style>
+        #topButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 18px;
+            padding: 10px;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=no">
+    <title>Teatro"Corpo Fechado"</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="Teatro.css" media="screen" />
+</head>
+<body>
+ 
+    <!-- Cabeçalho com logotipo e ícone do menu -->
+    <header class="custom-header">
+        <!-- <a href="index.html" class="logo">
+            <h1 style="font-size: 15px;">CED 08</h1>
+        </a> -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="sobreNos.html"><span>📖</span> Sobre Nós</a></li>
+                <li><a href="Teatro.html"><span>🎭</span> Teatro "Corpo Fechado"</a></li>
+                <li><a href="ConciênciaNegra.html"><span>✊🏽</span> Consciência Negra</a></li>
+                <li><a href="conquistas.html"><span>🔬</span> CED 08 Ciência</a></li>
+                <li><a href="curiosidades.html"><span>🔎</span> Curiosidades</a></li>
+                <li><a href="https://www.instagram.com/ced08gama/"><span>📸</span> Instagram</a></li>
+                <li><a href="https://linktr.ee/ced08gama?fbclid=PAZXh0bgNhZW0CMTEAAaY-ps3hxEQBxYxWM96Z-MFCefbhvxPBCILXVytCb_EE5ttX6PuAIMvVspg_aem_TlQLX6Tx_wIWXVK3rwaXHA"><span>🔗</span> Informações Importantes</a></li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </header>
+
+    
+
+    <section class="impactful-theater-section" style="margin-top: 130px;">
+    <div class="theater-content">
+        <div class="enhanced-image-container" data-aos="fade-right">
+    <div class="image-overlay">
+        <img 
+            class="theater-image" 
+            src="atores.png" 
+            alt="Atores em cena no teatro" />
+    </div>
+</div>
+
+<div class="BBB" data-aos="fade-left">
+    <h2 class="theater-title" data-aos="zoom-in">
+        Teatro <span class="highlight">"Corpo Fechado"</span>: Uma Reflexão Sobre o Racismo
+    </h2>
+    <p class="theater-paragraph" data-aos="fade-up" data-aos-delay="100">
+        No dia <strong>1º de agosto</strong>, alunos do Centro Educacional 08 do Gama apresentaram o espetáculo teatral <strong>"Corpo Fechado"</strong>, abordando a temática do racismo de forma <em>sensível</em> e <em>impactante</em>. 
+    </p>
+    <br>
+
+    <p class="theater-paragraph" data-aos="fade-up" data-aos-delay="200">
+        A apresentação destacou a diversidade dos alunos, reunindo talentos de diferentes turmas para dar vida a uma narrativa que une <strong>resistência</strong>, <strong>identidade</strong> e <strong>ancestralidade afro-brasileira</strong>.
+    </p>
+    <br>
+ 
+    <p class="theater-paragraph" data-aos="fade-up" data-aos-delay="300">
+        Coordenado pelo professor Valdeci, o projeto <strong>"Corpo Fechado"</strong> é um pilar cultural do CED 08, explorando temas que despertam reflexões profundas e aproximam a história da vivência escolar.
+    </p>
+    <br>
+
+    <p class="theater-paragraph" data-aos="fade-up" data-aos-delay="400">
+        Por meio das artes cênicas, os alunos têm a oportunidade de expressar emoções, compreender realidades diversas e criar diálogos sobre questões sociais. O "Corpo Fechado" não é apenas teatro: é uma ferramenta de <strong>educação transformadora</strong> e <strong>empoderamento cultural</strong>.
+    </p>
+</div>
+
+    </div>
+</section>
+
+    
+    <!-- <section>
+        <h3>Depoimentos</h3>
+        <blockquote>
+            <p>"Ver a peça foi uma experiência transformadora..." - <strong>Luan Belchior, aluno do 2º ano</strong></p>
+        </blockquote>
+        <br />
+        <blockquote>
+            <p>"gostei muito da peça,com certeza vou ver outras vezes..." - <strong>Felipe Paulo, aluno do 2º ano</strong></p>
+        </blockquote>
+    </section> -->
+     
+        <section>
+        <!-- <h1>Escreva seu depoimento</h1>
+        <form id="depoimentoForm">
+          <label for="nome">Nome e turma:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome e turma" required><br><br>
+          <label for="depoimento">Depoimento:</label>
+          <textarea id="depoimento" placeholder="Digite seu depoimento" required></textarea><br><br>
+          <button type="submit">Enviar</button>
+        </form>
+    
+        <div id="depoimentos"></div> -->
+      
+    
+    
+    
+        <video style="margin-top: 20px ;  border:solid 1px #fff; " class="video" width="300px" controls  loop>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <div class="media-container">
+            <img style="border: 1px solid black; align-items: center;" class="logo" src="corpofechado.png" alt="logo teatro corpo fechado">
+        </div>
+    </section>    
+    <footer>
+        <p>CED08 Gama - Educação para a Inclusão e Consciência</p>
+        <p>&copy; 2024 CED08 Gama. Todos os direitos reservados.</p>
+        <div class="desenvolver">
+            <a href="desenvolvedores.html">Desenvolvedores</a>
+        </div>
+    </footer>
+    
+
+    <script src="JS/script2.js"></script>
+    <button class="seta" onclick="topFunction()" id="topButton" title="Voltar ao topo">⬆️</button>
+
+<script>
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        const topButton = document.getElementById("topButton");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+}
+// Configuração do Firebase
+const firebaseConfig = {
+            apiKey: "SUA_API_KEY",
+            authDomain: "SEU_DOMÍNIO.firebaseapp.com",
+            databaseURL: "https://SEU_PROJETO.firebaseio.com",
+            projectId: "SEU_PROJETO_ID",
+            storageBucket: "SEU_BUCKET.appspot.com",
+            messagingSenderId: "SEU_ID",
+            appId: "SEU_APP_ID"
+          };
+      
+          const app = firebase.initializeApp(firebaseConfig);
+          const database = firebase.database();
+      
+          const form = document.getElementById('depoimentoForm');
+          const depoimentosDiv = document.getElementById('depoimentos');
+      
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const depoimento = document.getElementById('depoimento').value;
+      
+            // Salvar depoimento no Firebase
+            const novoDepoimentoRef = firebase.database().ref('depoimentos').push();
+            novoDepoimentoRef.set({ nome, depoimento });
+      
+            form.reset();
+          });
+      
+          // Exibir depoimentos em tempo real
+          firebase.database().ref('depoimentos').on('value', (snapshot) => {
+            depoimentosDiv.innerHTML = '';
+            snapshot.forEach((childSnapshot) => {
+              const data = childSnapshot.val();
+              const p = document.createElement('p');
+              p.textContent = `${data.nome}: ${data.depoimento}`;
+              depoimentosDiv.appendChild(p);
+            });
+          });
+
+          function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+</script>
+
+<style>
+    #topButton {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+        padding: 10px;
+    }
+</style>
+
+</body >
+</html>

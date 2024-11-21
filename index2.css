@@ -1,0 +1,1129 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+} */
+
+
+/*menu⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+} */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+/*pagina*/
+
+
+
+/* Animação Navbar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Principal */
+.principal {
+    text-align: center;
+    padding: 120px 15px 40px;
+    background-color: #333;
+    animation: fadeIn 1s ease;
+}
+
+/* Sobre Nós */
+section#sobre, section#atividades, section#galeria {
+    padding: 40px 15%;
+    animation: fadeIn 1s ease;
+}
+
+section h1 {
+    font-size: 28px;
+    color: #f90;
+    margin-bottom: 20px;
+    position: relative;
+    animation: popIn 1.2s ease;
+}
+
+section h3::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f90;
+    transition: width 0.5s ease;
+    animation: underline 0.8s ease forwards;
+    transform: translateX(-50%);
+}
+
+section h3, section ul {
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Galeria */
+.galeria {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInImage 1s ease;
+}
+
+.galeria img {
+    max-width: 30%;
+    border: 2px solid #f90;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.galeria:hover > :not(:hover) {
+    
+   
+    filter: blur(5px);
+        opacity: 0.5;
+    }
+
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Estilos para a seção de atividades */
+#atividades {
+    padding: 40px 15%;
+    background-color: #333;
+    color: #fff;
+    animation: fadeIn 1s ease;
+    border-radius: 8px;
+}
+
+#atividades h3 {
+    font-size: 28px;
+    color: #f90;
+    margin-bottom: 20px;
+    position: relative;
+    animation: popIn 1.2s ease;
+}
+
+#atividades ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#atividades ul li {
+    margin-bottom: 15px;
+}
+
+#atividades a {
+    color: #f90;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de sublinhado deslizante suave */
+#atividades a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #f90;
+    transition: width 0.4s ease;
+}
+
+#atividades a:hover {
+    color: #fff;
+}
+
+#atividades a:hover::after {
+    width: 100%; /* O sublinhado expande para cobrir todo o link */
+}
+
+/* Efeito de "slide" para o link */
+@keyframes slideIn {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#atividades ul li {
+    animation: slideIn 0.6s ease forwards;
+}
+
+/* Animação de fadeIn para a seção */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+}
+/* Estilo para os Links em Recursos Adicionais */
+#recursos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recursos li {
+    margin: 10px 0;
+}
+
+#recursos a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+#recursos a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.4s ease;
+}
+
+#recursos a:hover {
+    color: #fff;
+}
+
+#recursos a:hover::after {
+    width: 100%;
+}
+
+/* Botão Desenvolver */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1em; /* Tamanho de fonte adaptável */
+}
+
+/* Botão Desenvolver */
+.desenvolver {
+    margin-top: 15px; /* Espaço entre o botão e o texto */
+    display: flex; 
+    justify-content: center; /* Centraliza o botão */
+    align-items: center; /* Ajusta alinhamento vertical */
+}
+
+.desenvolver a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0078D7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.9em; /* Reduz texto para telas menores */
+    }
+
+    .desenvolver a {
+        font-size: 0.9em;
+        padding: 8px 16px; /* Botão menor para smartphones */
+    }
+}
+
+/* Botão Seta */
+.seta {
+    background-color: #1c1c1c;
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #FFD700;
+    color: #1c1c1c;
+    transform: scale(1.1);
+}
+
+.seta:active {
+    transform: scale(0.95);
+}
+
+
+/* Estilo para a seção */
+#sobre {
+    background: linear-gradient(135deg, #222, #333); /* Fundo com gradiente escuro */
+    padding: 50px 20px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para manter os efeitos dentro da seção */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre:hover {
+    background: linear-gradient(135deg, #2a2a2a, #444); /* Gradiente mais claro no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
+}
+
+/* Estilo e animação para o título */
+.js1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    animation: fadeIn 1s ease forwards; /* Animação de entrada */
+    opacity: 0;
+    color:#f90;
+}
+
+/* Estilo para o subtítulo */
+#sobre h3 {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d3d3d3;
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* Estilo e efeito para o link */
+.ll {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #444;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.4s ease;
+    z-index: 1;
+}
+
+.ll:hover::before {
+    left: 100%;
+}
+
+.ll:hover {
+    background-color: #555; /* Fundo mais claro no hover */
+    color: #ffffff; /* Cor mais clara para o texto */
+}
+
+/* Animações keyframes */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Estilo principal do Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: #fff;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #ff9800; /* Efeito hover na logo */
+}
+
+/* Links do menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #ff9800;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Ícone do menu (para telas pequenas) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilos para o menu aberto */
+.nav-links.open {
+    display: flex;
+}
+/* Estilo básico */
+.ll {
+    display: inline-block; /* Torna o elemento parecido com um botão */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Texto branco */
+    text-decoration: none;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradiente */
+    padding: 12px 24px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Suavidade na transição */
+}
+
+/* Efeito de hover */
+.ll:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Inverte o gradiente */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ll {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+/* Estilo base */
+a.super-chamativo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff; /* Texto branco */
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4); /* Gradiente rosa suave */
+    padding: 15px 30px;
+    border-radius: 40px; /* Botão com bordas arredondadas */
+    box-shadow: 0px 8px 15px rgba(255, 160, 160, 0.5); /* Sombra suave */
+    transition: all 0.3s ease, background 1s; /* Transições suaves */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efeito de brilho ao passar o mouse */
+a.super-chamativo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+a.super-chamativo:hover::before {
+    left: 100%;
+}
+
+/* Efeito de escala ao passar o mouse */
+a.super-chamativo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 100, 100, 0.6); /* Sombra mais forte */
+}
+
+/* Efeito dinâmico de cores (JavaScript complementará) */
+a.super-chamativo {
+    animation: colorCycle 6s infinite;
+}
+
+/* Animação de ciclo de cores */
+@keyframes colorCycle {
+    0% { background: linear-gradient(90deg, #ff9a9e, #fad0c4); }
+    25% { background: linear-gradient(90deg, #fbc2eb, #a6c1ee); }
+    50% { background: linear-gradient(90deg, #d4fc79, #96e6a1); }
+    75% { background: linear-gradient(90deg, #84fab0, #8fd3f4); }
+    100% { background: linear-gradient(90deg, #ff9a9e, #fad0c4); }
+}
+
+a.super-chamativo span {
+    position: relative;
+    z-index: 1; /* Garante que o texto fique acima do brilho */
+}
+
+
+
+/* Estilo geral */
+#galeria {
+    padding: 40px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#galeria h4 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.galeria a img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #galeria h2 {
+        font-size: 2rem;
+    }
+
+    #galeria h4 {
+        font-size: 1rem;
+    }
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .swiper-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+
+
+
+
+/* Estilo Geral do Header */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Esconde o ícone por padrão */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: #FFDC00;
+    color: #001f3f;
+}
+
+.nav-menu ul li span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o menu no mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+}
+
+.ced{
+    font-size: 100px;
+}
+
+.tamanho{
+    font-size: 30px;
+}
+/* Padrão de Estilo para os Cabeçalhos */
+.custom-header {
+    font-family: 'Kanit', sans-serif; /* Padroniza a fonte */
+}
+
+.custom-header .logo h1 {
+    font-size: 40px; /* Define o tamanho padrão do título */
+    margin: 0; /* Remove margens extras */
+    text-transform: uppercase; /* Define o texto em caixa alta (opcional) */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+.nav-menu ul {
+    display: flex; /* Organiza os itens em linha */
+    gap: 20px; /* Define o espaçamento entre os itens */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove os marcadores */
+}
+
+.nav-menu ul li a {
+    font-size: 16px; /* Define o tamanho do texto dos links */
+    letter-spacing: 1.2px; /* Espaçamento entre letras dos links */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Adiciona animação na interação */
+}
+
+.nav-menu ul li a:hover {
+    color: #FFDC00; /* Cor de destaque ao passar o mouse */
+}
+
+.nav-menu ul li span {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column; /* Itens em coluna no mobile */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+}

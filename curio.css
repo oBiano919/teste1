@@ -1,0 +1,1029 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
+/*tudo⬇️ */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*menu⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+} */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo Geral das Sections */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section: Apresentação */
+.section-apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #006405, #8d7300);
+    color: #fff;
+}
+
+.section-apresentacao img {
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-apresentacao .content {
+    max-width: 50%;
+}
+
+.section-apresentacao button {
+    background: #ffa500;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.section-apresentacao button:hover {
+    background: #ff4500;
+    color: #fff;
+}
+
+/* Section: Projetos */
+.section-projetos {
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.projetos-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projeto-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.projeto-item button {
+    margin-top: 10px;
+    background: #ffa500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.projeto-item button:hover {
+    background: #ff4500;
+    color: #fff;
+}
+
+/* Section: Consciência Negra */
+.section-consciencia {
+    background: linear-gradient(to right, #1c1c1c, #333);
+    color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.section-consciencia img {
+    margin: 20px 0;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-consciencia button {
+    background: #ffa500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Section: Contato */
+.section-contato {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.section-contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-contato input, .section-contato textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.section-contato button {
+    background: #ffa500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.botao-instagram {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.botao-instagram span {
+    position: relative;
+    z-index: 2;
+}
+
+.botao-instagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.botao-instagram:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.botao-instagram:hover::before {
+    opacity: 1;
+}
+
+.botao-instagram:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .botao-instagram {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Estilo geral da seção */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do título */
+.content h2 {
+    font-size: 2.5rem;
+    color: #dc2743;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Botão interativo */
+.botao-instagram {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.botao-instagram span {
+    position: relative;
+    z-index: 2;
+}
+
+.botao-instagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: left 0.4s ease;
+    z-index: 1;
+}
+
+.botao-instagram:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.botao-instagram:hover::before {
+    left: 100%;
+}
+
+.botao-instagram:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .botao-instagram {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+/* Estilo geral da seção */
+.section-cao-terapia {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fffaf0; /* Fundo suave, estilo neutro */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoração temática */
+.section-cao-terapia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('paw-pattern.png') repeat;
+    opacity: 0.05; /* Marca d'água com padrão de patinhas */
+    z-index: -1;
+}
+
+/* Estilo do título */
+.section-cao-terapia h2 {
+    font-size: 2.8rem;
+    color: #ff6f61; /* Cor temática alegre */
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do parágrafo */
+.section-cao-terapia p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Imagem central */
+.section-cao-terapia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-cao-terapia img:hover {
+    transform: scale(1.05);
+}
+
+/* Botão de reportagem */
+.botao-reportagem {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff9f7f, #ff6f61);
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.botao-reportagem::before {
+    content: '🐶';
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: left 0.4s ease;
+}
+
+.botao-reportagem:hover::before {
+    left: 10px;
+}
+
+.botao-reportagem:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.botao-reportagem:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-cao-terapia h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-cao-terapia p {
+        font-size: 1.1rem;
+    }
+
+    .botao-reportagem {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+/* Estilo geral da seção */
+.section-projetos {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.section-projetos h2 {
+    font-size: 3rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-projetos h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff6f61;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Estilo do container */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilo de cada item */
+.projeto-item {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.projeto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #ff6f61;
+}
+
+.projeto-item h3 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin: 15px;
+}
+
+.projeto-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 15px 15px;
+    color: #4a5568;
+}
+
+/* Botão de ação */
+.btn-projeto {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 auto 15px;
+    padding: 10px 0;
+    background: linear-gradient(45deg, #ff9f7f, #ff6f61);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-projeto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-projeto:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto-item {
+        width: 90%;
+    }
+
+    .section-projetos h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1em; /* Tamanho de fonte adaptável */
+}
+
+/* Botão Desenvolver */
+.desenvolver {
+    margin-top: 15px; /* Espaço entre o botão e o texto */
+    display: flex; 
+    justify-content: center; /* Centraliza o botão */
+    align-items: center; /* Ajusta alinhamento vertical */
+}
+
+.desenvolver a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0078D7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.9em; /* Reduz texto para telas menores */
+    }
+
+    .desenvolver a {
+        font-size: 0.9em;
+        padding: 8px 16px; /* Botão menor para smartphones */
+    }
+}
+
+/* Botão Seta */
+.seta {
+    background-color: #1c1c1c;
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #FFD700;
+    color: #1c1c1c;
+    transform: scale(1.1);
+}
+
+.seta:active {
+    transform: scale(0.95);
+}
+
+
+/* Estilo Geral do Header */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Esconde o ícone por padrão */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: #FFDC00;
+    color: #001f3f;
+}
+
+.nav-menu ul li span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o menu no mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+}

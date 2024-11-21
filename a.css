@@ -1,0 +1,1103 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
+/*tudo⬇️*/
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*menu⬇️*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*pagina⬇️*/
+
+
+
+
+
+
+
+
+
+
+
+/* Animação Navbar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Principal */
+.principal {
+    text-align: center;
+    padding: 120px 15px 40px;
+    background-color: #333;
+    animation: fadeIn 1s ease;
+}
+
+/* Sobre Nós */
+section#sobre, section#atividades, section#galeria {
+    padding: 40px 15%;
+    animation: fadeIn 1s ease;
+}
+
+section h1 {
+    font-size: 28px;
+    color: #f90;
+    margin-bottom: 20px;
+    position: relative;
+    animation: popIn 1.2s ease;
+}
+
+section h3::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f90;
+    transition: width 0.5s ease;
+    animation: underline 0.8s ease forwards;
+    transform: translateX(-50%);
+}
+
+section h3, section ul {
+    color: #fff;
+    margin-top: 10px;
+}
+
+Galeria
+.galeria {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInImage 1s ease;
+}
+
+.galeria img {
+    border: 2px solid #f90;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.galeria:hover > :not(:hover) {
+    
+   
+    filter: blur(5px);
+        opacity: 0.5;
+    }
+
+    #galeria {
+        display: grid;
+        grid-template-columns: 3 repeat(auto-fit, minmax(150px, 1fr)); /* Gera colunas automaticamente */
+        gap: 10px; /* Espaço entre as imagens */
+        padding: 20px;
+        justify-items: center; /* Centraliza as imagens */
+      }
+      
+      .galeria img {
+        width: 150px; /* Define uma largura fixa */
+        height: 150px; /* Define uma altura fixa */
+        object-fit: cover; /* Garante que a imagem preencha sem distorção */
+        border: 3px solid #ffc107; /* Cor da borda (amarelo) */
+        border-radius: 10px; /* Cantos arredondados */
+        transition: transform 0.3s; /* Adiciona animação ao passar o mouse */
+      }
+      
+      .galeria img:hover {
+        transform: scale(1.1); /* Zoom ao passar o mouse */
+      }
+/* Estilo básico */
+.ll {
+    display: inline-block; /* Torna o elemento parecido com um botão */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Texto branco */
+    text-decoration: none;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradiente */
+    padding: 12px 24px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Suavidade na transição */
+}
+
+/* Efeito de hover */
+.ll:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Inverte o gradiente */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ll {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+/* Estilo base */
+a.super-chamativo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff; /* Texto branco */
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4); /* Gradiente rosa suave */
+    padding: 15px 30px;
+    border-radius: 40px; /* Botão com bordas arredondadas */
+    box-shadow: 0px 8px 15px rgba(255, 160, 160, 0.5); /* Sombra suave */
+    transition: all 0.3s ease, background 1s; /* Transições suaves */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efeito de brilho ao passar o mouse */
+a.super-chamativo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+a.super-chamativo:hover::before {
+    left: 100%;
+}
+
+/* Efeito de escala ao passar o mouse */
+a.super-chamativo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 100, 100, 0.6); /* Sombra mais forte */
+}
+
+/* Efeito dinâmico de cores (JavaScript complementará) */
+a.super-chamativo {
+    animation: colorCycle 6s infinite;
+}
+
+/* Animação de ciclo de cores */
+@keyframes colorCycle {
+    0% { background: linear-gradient(90deg, #ff9a9e, #fad0c4); }
+    25% { background: linear-gradient(90deg, #fbc2eb, #a6c1ee); }
+    50% { background: linear-gradient(90deg, #d4fc79, #96e6a1); }
+    75% { background: linear-gradient(90deg, #84fab0, #8fd3f4); }
+    100% { background: linear-gradient(90deg, #ff9a9e, #fad0c4); }
+}
+
+a.super-chamativo span {
+    position: relative;
+    z-index: 1; /* Garante que o texto fique acima do brilho */
+}
+/* Estilo Geral da Galeria */
+#galeria {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#galeria h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#galeria h4 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o Contêiner da Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    padding: 0 10px;
+}
+
+/* Estilo para as Imagens */
+.galeria img {
+    width: 100%;
+    max-width: 200px; /* Controle para evitar imagens muito grandes */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    #galeria h2 {
+        font-size: 1.8rem;
+    }
+
+    #galeria h4 {
+        font-size: 1rem;
+    }
+
+    .galeria img {
+        max-width: 150px;
+    }
+}
+
+
+
+/* footer⬇️ */
+
+
+
+
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+footer p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/*pagina⬇️*/
+
+
+
+
+
+
+/* Estilos para a seção de atividades */
+#atividades {
+    padding: 40px 15%;
+    background-color: #333;
+    color: #fff;
+    animation: fadeIn 1s ease;
+    border-radius: 8px;
+}
+
+#atividades h3 {
+    font-size: 28px;
+    color: #f90;
+    margin-bottom: 20px;
+    position: relative;
+    animation: popIn 1.2s ease;
+}
+
+#atividades ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#atividades ul li {
+    margin-bottom: 15px;
+}
+
+#atividades a {
+    color: #f90;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de sublinhado deslizante suave */
+#atividades a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #f90;
+    transition: width 0.4s ease;
+}
+
+#atividades a:hover {
+    color: #fff;
+}
+
+#atividades a:hover::after {
+    width: 100%; /* O sublinhado expande para cobrir todo o link */
+}
+
+/* Efeito de "slide" para o link */
+@keyframes slideIn {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#atividades ul li {
+    animation: slideIn 0.6s ease forwards;
+}
+
+/* Animação de fadeIn para a seção */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+}
+/* Estilo para os Links em Recursos Adicionais */
+#recursos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recursos li {
+    margin: 10px 0;
+}
+
+#recursos a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+#recursos a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.4s ease;
+}
+
+#recursos a:hover {
+    color: #fff;
+}
+
+#recursos a:hover::after {
+    width: 100%;
+}
+
+/* Botão Desenvolver */
+.desenvolver {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.desenvolver a {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0078D7;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.desenvolver::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.desenvolver a:hover {
+    color: #000;
+    transform: scale(1.05);
+}
+
+.desenvolver:hover::before {
+    left: -10%;
+}
+
+
+
+
+
+/* Footer⬇️ */
+
+
+
+
+
+footer {
+    position: relative;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Posicionamento do botão corrigido */
+.desenvolver {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.desenvolver a {
+    color: #fff;
+    background-color: #0078D7;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+}
+
+/* Botão Seta */
+.seta {
+    background-color: #1c1c1c; /* Fundo preto para transmitir força e elegância */
+    color: #FFD700; /* Dourado, símbolo de prosperidade */
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito para dar destaque ao botão */
+    border: none;
+    border-radius: 50px; /* Deixa o botão mais arredondado */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #FFD700; /* Inverte as cores no hover */
+    color: #1c1c1c; /* Texto preto */
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+.seta:active {
+    transform: scale(0.95); /* Dá uma sensação de clique */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .desenvolver {
+        position: static; /* Remove o posicionamento absoluto */
+        margin: 20px auto; /* Centraliza o botão */
+        text-align: center; /* Garante alinhamento no centro */
+    }
+    
+    footer {
+        padding-bottom: 50px; /* Adiciona mais espaço para evitar sobreposição */
+    }
+}
+/* Estilo para a seção */
+#sobre {
+    background: linear-gradient(135deg, #222, #333); /* Fundo com gradiente escuro */
+    padding: 50px 20px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para manter os efeitos dentro da seção */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre:hover {
+    background: linear-gradient(135deg, #2a2a2a, #444); /* Gradiente mais claro no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
+}
+
+/* Estilo e animação para o título */
+.js1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    animation: fadeIn 1s ease forwards; /* Animação de entrada */
+    opacity: 0;
+    color:#f90;
+}
+
+/* Estilo para o subtítulo */
+#sobre h3 {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d3d3d3;
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* Estilo e efeito para o link */
+.ll {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #444;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.4s ease;
+    z-index: 1;
+}
+
+.ll:hover::before {
+    left: 100%;
+}
+
+.ll:hover {
+    background-color: #555; /* Fundo mais claro no hover */
+    color: #ffffff; /* Cor mais clara para o texto */
+}
+
+/* Animações keyframes */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+/*menu⬇️*/
+
+
+
+
+
+
+
+/* Estilo principal do Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: #fff;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #ff9800; /* Efeito hover na logo */
+}
+
+/* Links do menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #ff9800;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Ícone do menu (para telas pequenas) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilos para o menu aberto */
+.nav-links.open {
+    display: flex;
+}
+
+
+
+
+
+

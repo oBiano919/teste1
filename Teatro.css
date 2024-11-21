@@ -1,0 +1,953 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
+/*tudo⬇️ */
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*menu⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 15px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+} */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*pagina⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* Navbar */
+header.principal {
+    background: #222;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column; /* Define a direção da coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    animation: slideDown 0.8s ease;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #f90;
+    font-weight: bold;
+    transition: color 0.4s ease;
+    margin-bottom: 10px; /* Espaço entre o título e o menu */
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#nav-menu{
+   
+    font-family: "Anton SC", sans-serif;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Espaçamento entre os itens de navegação */
+}
+
+#nav-menu ul li {
+    margin: 0;
+}
+
+#nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+#nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f90;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+#nav-menu a:hover {
+    color: #f90;
+}
+
+#nav-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Animação Navbar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Principal */
+.principal {
+    text-align: center;
+    padding: 120px 15px 40px;
+    background-color: #333;
+    animation: fadeIn 1s ease;
+}
+
+/* Estilo da seção de conteúdo */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #f90;
+    margin: 20px 0;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+/* Logo no canto superior esquerdo */
+header.principal {
+    background: #222;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+header .logo {
+    width: 50px; /* Diminui o tamanho da logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 20px;
+    color: #f90;
+    font-weight: bold;
+    transition: color 0.4s ease;
+    margin: 0;
+    display: inline-block;
+}
+
+#nav-menu {
+    flex: 1;
+    text-align: right;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+#nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.4s ease;
+}
+
+#nav-menu a:hover {
+    color: #f90;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    header .logo {
+        width: 40px;
+    }
+}
+/* Estilos principais da seção */
+.theater-section {
+    padding: 40px 15%;
+    background-color: #000; /* Fundo preto */
+    color: #fff;
+    text-align: center;
+}
+
+/* Imagem principal */
+.main-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto 40px;
+    display: block;
+    border: 2px solid #f90;
+    border-radius: 8px;
+}
+
+/* Títulos */
+.theater-section h2, .theater-section h3 {
+    color: #f90;
+    margin-bottom: 15px;
+}
+
+.theater-section h2 {
+    font-size: 28px;
+}
+
+.theater-section h3 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+/* Bloco de depoimento */
+blockquote {
+    margin: 20px;
+    padding: 10
+}
+/* Estilo para os Links em Recursos Adicionais */
+#recursos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recursos li {
+    margin: 10px 0;
+}
+
+#recursos a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+#recursos a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.4s ease;
+}
+
+#recursos a:hover {
+    color: #fff;
+}
+
+#recursos a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1em; /* Tamanho de fonte adaptável */
+}
+
+/* Botão Desenvolver */
+.desenvolver {
+    margin-top: 15px; /* Espaço entre o botão e o texto */
+    display: flex; 
+    justify-content: center; /* Centraliza o botão */
+    align-items: center; /* Ajusta alinhamento vertical */
+}
+
+.desenvolver a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0078D7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.9em; /* Reduz texto para telas menores */
+    }
+
+    .desenvolver a {
+        font-size: 0.9em;
+        padding: 8px 16px; /* Botão menor para smartphones */
+    }
+}
+
+/* Botão Seta */
+.seta {
+    background-color: #1c1c1c;
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #FFD700;
+    color: #1c1c1c;
+    transform: scale(1.1);
+}
+
+.seta:active {
+    transform: scale(0.95);
+}
+
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .desenvolver {
+        position: static; /* Remove o posicionamento absoluto */
+        margin: 20px auto; /* Centraliza o botão */
+        text-align: center; /* Garante alinhamento no centro */
+    }
+    
+    footer {
+        padding-bottom: 50px; /* Adiciona mais espaço para evitar sobreposição */
+    }
+}
+/* Estilo principal do Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: #fff;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #ff9800; /* Efeito hover na logo */
+}
+
+/* Links do menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #ff9800;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Ícone do menu (para telas pequenas) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilos para o menu aberto */
+.nav-links.open {
+    display: flex;
+}  
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.message {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+.aumentar {
+    font-size: 15px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre as linhas */
+}
+.aumentar h2 {
+    font-size: 24px; /* Tamanho maior para o título */
+    font-weight: bold;
+}
+
+/* Estilo Geral do Header */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Esconde o ícone por padrão */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: #FFDC00;
+    color: #001f3f;
+}
+
+.nav-menu ul li span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o menu no mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+}

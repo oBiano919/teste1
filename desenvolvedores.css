@@ -1,0 +1,938 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
+
+/*tudo⬇️ */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: gray;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*menu⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: rgba(38, 0, 255, 0.5);;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 24px; 
+    color: rgba(38, 0, 255, 0.5);;
+    flex: 1;
+    text-align: center;
+} */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(38, 0, 255, 0.5);;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: rgba(38, 0, 255, 0.5);;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: rgba(38, 0, 255, 0.5);;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: rgba(38, 0, 255, 0.5);;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(38, 0, 255, 0.5);;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*pagina⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Itim&family=Kanit:wght@400;700&display=swap');
+
+
+/* Navbar aprimorada */
+header.principal {
+    background: rgba(34, 34, 34, 0.95);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 28px;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #fff;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#nav-menu a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f9f9f9;
+    position: relative;
+    padding: 5px 0;
+}
+
+#nav-menu a:hover {
+    color: rgba(38, 0, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+#nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: rgba(38, 0, 255, 0.5);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#nav-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Seção de Atividades */
+#atividades {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #333, #222);
+    color: #fff;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#atividades h3 {
+    font-size: 32px;
+    font-family: "Kanit", sans-serif;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    animation: fadeIn 1s ease;
+}
+
+#atividades p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+#atividades a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(126, 126, 126), rgb(0, 0, 66));
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#atividades a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(38, 0, 255, 0.5);
+}
+
+/* Imagem de perfil */
+#atividades img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#atividades img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(22, 24, 175, 0.6);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    color: #bbb;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    animation: slideUp 1s ease;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seta {
+    background-color: #1c1c1c; /* Fundo preto para transmitir força e elegância */
+    color: rgba(38, 0, 255, 0.5); /* Dourado, símbolo de prosperidade */
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Negrito para dar destaque ao botão */
+    border: none;
+    border-radius: 50px; /* Deixa o botão mais arredondado */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: rgba(38, 0, 255, 0.5); /* Inverte as cores no hover */
+    color: #1c1c1c; /* Texto preto */
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+.seta:active {
+    transform: scale(0.95); /* Dá uma sensação de clique */
+}
+/* Estilo principal do Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    color: #fff;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: rgba(38, 0, 255, 0.5); /* Efeito hover na logo */
+}
+
+/* Links do menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(38, 0, 255, 0.5);
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Ícone do menu (para telas pequenas) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilos para o menu aberto */
+.nav-links.open {
+    display: flex;
+} 
+/* Estilo da seção Sobre */
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e1e2f, #0f0f1c); /* Gradiente azul escuro e preto */
+    color: #ffffff;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#sobre h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#sobre h4 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Estilo das seções de atividades */
+#atividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1c1c3b, #111122); /* Azul e preto */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#atividades:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+#atividades h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#atividades p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Links sociais */
+.social-link {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    background: #ffffff;
+    color: #1c1c3b;
+}
+
+/* Estilo das imagens */
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo do rodapé */
+#footer {
+    background: #0f0f1c;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#footer p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #atividades {
+        max-width: 90%;
+    }
+
+    #sobre h2 {
+        font-size: 2rem;
+    }
+
+    #atividades h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-link {
+        font-size: 0.9rem;
+    }
+
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #footer {
+        font-size: 0.8rem;
+    }
+}
+/* Estilo para as seções de atividades */
+#atividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e1e2f, #0f0f1c); /* Gradiente suave */
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#atividades:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+#atividades h3 {
+    font-size: 2rem;
+    font-family: "Kanit", sans-serif;
+    margin-bottom: 15px;
+    color: rgba(38, 0, 255, 0.5);
+}
+
+/* Texto */
+#atividades p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Links */
+.social-link {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #f90, #ff4500);
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 138, 0, 0.5);
+}
+
+/* Imagem */
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 138, 0, 0.6);
+} .hands {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hands img {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.hands p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .hands p {
+        font-size: 16px;
+        margin: 10px;
+    }
+}
+
+/* Estilo Geral do Header */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Esconde o ícone por padrão */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: #FFDC00;
+    color: #001f3f;
+}
+
+.nav-menu ul li span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o menu no mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+}
+

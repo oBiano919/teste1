@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+
+
+
+
+/*tudo⬇️ */
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/*menu⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+} */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    z-index: 2; /* Garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Menu quando expandido */
+.nav-links {
+    display: none; /* Menu oculto inicialmente */
+    position: absolute;
+    top: 60px; /* A distância de 60px do topo para o menu */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 3; /* Para garantir que o menu fique acima do conteúdo */
+}
+
+/* Menu aberto */
+.nav-links.open {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 4; /* Para garantir que o ícone do menu também fique acima do conteúdo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Garantir que o conteúdo da página não seja ocultado pelo menu */
+    section {
+        padding-top: 120px; /* Empurrar o conteúdo para baixo */
+    }
+}
+
+/* Estilos do cabeçalho e menu */
+header {
+    background-color: #333;
+    color: #FFD700;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #FFD700;
+    flex: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFD700;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+/* Estilos para layout de desktop */
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*pagina⬇️ */
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo Geral da Seção */
+.section-content {
+    margin: 50px 20px;
+    padding: 40px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Título Principal */
+/* Estilo geral da seção Sobre */
+.section-content {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 40px auto;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+/* Título da Seção */
+.sobre-title {
+    font-size: 2.8rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Contêiner de Texto */
+.sobre-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+}
+
+/* Texto da Seção */
+.sobre-text {
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: #f0f8ff;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Destaques no Texto */
+.sobre-text strong {
+    color: #00ffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-content {
+        padding: 40px 15px;
+    }
+
+    .sobre-title {
+        font-size: 2.2rem;
+    }
+
+    .sobre-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Bordas decorativas (opcional) */
+.section-content::before,
+.section-content::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+.section-content::before {
+    top: -20px;
+    left: -20px;
+    animation-delay: 2s;
+}
+
+.section-content::after {
+    bottom: -20px;
+    right: -20px;
+    animation-delay: 4s;
+}
+
+/* Animação das bordas decorativas */
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+/* Estilo do Contêiner Principal */
+.image-highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Azul degradê */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+/* Estilo da Imagem */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.image-container:hover .highlight-image {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* Estilo da Legenda */
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container:hover .image-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Título da Legenda */
+.image-caption h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Texto da Legenda */
+.image-caption p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .image-highlight {
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .image-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .image-caption p {
+        font-size: 0.9rem;
+    }
+}
+/* Contêiner Principal da Seção */
+.localizacao {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fundo em degradê azul */
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+/* Título da Seção */
+.localizacao-titulo {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Descrição da Seção */
+.localizacao-descricao {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estilo do Endereço */
+.endereco-container {
+    margin: 20px 0;
+}
+
+.endereco {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.endereco:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo do Contêiner do Mapa */
+.mapa-container {
+    margin-top: 30px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .localizacao-titulo {
+        font-size: 2rem;
+    }
+
+    .localizacao-descricao {
+        font-size: 1rem;
+    }
+
+    .endereco {
+        font-size: 1.5rem;
+    }
+}
+/* Estilização Geral da Seção */
+.contatos {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff6a00, #ff9500);
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+/* Título */
+.contatos-titulo {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Descrição */
+.contatos-descricao {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Contêiner de Contatos */
+.contatos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Cada Item de Contato */
+.contato-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Ícones */
+.icone-contato {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+/* Informações de Contato */
+.info-contato h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.info-contato p a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.info-contato p a:hover {
+    color: #ffd700;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contatos-container {
+        flex-direction: column;
+    }
+
+    .contato-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1em; /* Tamanho de fonte adaptável */
+}
+
+/* Botão Desenvolver */
+.desenvolver {
+    margin-top: 15px; /* Espaço entre o botão e o texto */
+    display: flex; 
+    justify-content: center; /* Centraliza o botão */
+    align-items: center; /* Ajusta alinhamento vertical */
+}
+
+.desenvolver a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #0078D7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.desenvolver a:hover {
+    background-color: #005BB5;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.9em; /* Reduz texto para telas menores */
+    }
+
+    .desenvolver a {
+        font-size: 0.9em;
+        padding: 8px 16px; /* Botão menor para smartphones */
+    }
+}
+
+/* Botão Seta */
+.seta {
+    background-color: #1c1c1c;
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #FFD700;
+    color: #1c1c1c;
+    transform: scale(1.1);
+}
+
+.seta:active {
+    transform: scale(0.95);
+}
+
+/* Estilo Geral do Header */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.logo h1:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Esconde o ícone por padrão */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: #FFDC00;
+    color: #001f3f;
+}
+
+.nav-menu ul li span {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o menu no mobile */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+}
+
+.tamanho{
+    font-size: 30px;
+}
+/* Padrão de Estilo para os Cabeçalhos */
+.custom-header {
+    font-family: 'Kanit', sans-serif; /* Padroniza a fonte */
+}
+
+.custom-header .logo h1 {
+    font-size: 40px; /* Define o tamanho padrão do título */
+    margin: 0; /* Remove margens extras */
+    text-transform: uppercase; /* Define o texto em caixa alta (opcional) */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+.nav-menu ul {
+    display: flex; /* Organiza os itens em linha */
+    gap: 20px; /* Define o espaçamento entre os itens */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove os marcadores */
+}
+
+.nav-menu ul li a {
+    font-size: 16px; /* Define o tamanho do texto dos links */
+    letter-spacing: 1.2px; /* Espaçamento entre letras dos links */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Adiciona animação na interação */
+}
+
+.nav-menu ul li a:hover {
+    color: #FFDC00; /* Cor de destaque ao passar o mouse */
+}
+
+.nav-menu ul li span {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column; /* Itens em coluna no mobile */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+}
